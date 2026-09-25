@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thi đấu giải — Cờ tướng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="view-lobby">
+      <span class="badge">THI ĐẤU GIẢI</span>
+      <h1>Giải Swiss liên tục</h1>
+      <p class="sub" id="evt-meta"></p>
+      <div id="pair-list"></div>
+      <div class="tools">
+        <button id="btn-table">Bảng điểm</button>
+        <button class="ghost" id="btn-new">Giải mới</button>
+      </div>
+    </section>
+
+    <section id="view-match" class="hidden">
+      <span class="badge" id="badge">SWISS · R1 · 10+5</span>
+      <div class="hdr">
+        <div>
+          <div class="who" id="opp-name">Đối thủ</div>
+          <div class="elo" id="opp-elo">Elo</div>
+          <div class="clock">10:00</div>
+        </div>
+        <div>0 — 0</div>
+        <div>
+          <div class="who" id="you-name">Bạn</div>
+          <div class="elo" id="you-elo">Elo</div>
+          <div class="clock">10:00</div>
+        </div>
+      </div>
+      <div class="board-wrap">
+        <div class="board" id="board"></div>
+        <div class="plinth"></div>
+      </div>
+      <p class="status" id="status"></p>
+      <div class="tools">
+        <button id="btn-resign">Đầu hàng</button>
+        <button id="btn-draw">Hòa</button>
+        <button class="ghost" id="btn-menu">Menu</button>
+      </div>
+    </section>
+
+    <section id="view-table" class="hidden">
+      <span class="badge">BẢNG ĐIỂM</span>
+      <h1>Xếp hạng giải</h1>
+      <table>
+        <thead><tr><th>#</th><th>Kỳ thủ</th><th>Điểm</th><th>Elo</th></tr></thead>
+        <tbody id="standings"></tbody>
+      </table>
+      <div class="tools"><button id="btn-back-lobby">Về sảnh</button></div>
+    </section>
+  </div>
+  <script src="js/xiangqi.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/tournament.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
